@@ -1,0 +1,40 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LinearRegression
+
+# Load data
+df = pd.read_csv("../data/stock_data.csv")
+
+# Features and target
+X = df[['Open', 'High', 'Low', 'Volume']]
+y = df['Close']
+
+# Split data
+X_train, X_test, y_train, y_test = train_test_split(
+    X, y, test_size=0.2, random_state=42
+)
+
+# Train model
+model = LinearRegression()
+model.fit(X_train, y_train)
+
+# Predictions
+predictions = model.predict(X_test)
+
+# Plot graph
+plt.figure(figsize=(10,5))
+
+plt.plot(y_test.values, label='Actual Prices', marker='o')
+plt.plot(predictions, label='Predicted Prices', marker='x')
+
+plt.title("Actual vs Predicted Stock Prices")
+plt.xlabel("Test Data")
+plt.ylabel("Stock Price")
+
+plt.legend()
+
+# Save image
+plt.savefig("../images/prediction_graph.png")
+
+plt.show()
