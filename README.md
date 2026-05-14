@@ -2,6 +2,10 @@
 
 ## Overview
 This project analyzes stock market data and predicts stock closing prices using machine learning.
+# stocks websites for demo
+Apple Store Online - Apple (IN) https://share.google/VVqEAh30Z219NpAqk
+Microsoft – AI, Cloud, Productivity, Computing, Gaming & Apps https://share.google/1dvcKeyh5n9YttFLf
+
 
 ## Features
 - Stock market data collection
