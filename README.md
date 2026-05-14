@@ -31,7 +31,7 @@ This project analyzes stock market data and predicts stock closing prices using 
 - Trend analysis graphs
 - Stock prediction model
 - Dashboard-style visualizations
-- <img width="720" height="349" alt="57139" src="https://github.com/user-attachments/assets/536e1eb8-8c68-415d-9d65-ac964f706a25" />
+<img width="720" height="349" alt="57139" src="https://github.com/user-attachments/assets/536e1eb8-8c68-415d-9d65-ac964f706a25" />
 <img width="720" height="425" alt="57136" src="https://github.com/user-attachments/assets/427b3447-b517-42cd-86b2-5955f1047a09" />
 
 <img width="720" height="625" alt="57133" src="https://github.com/user-attachments/assets/30b2bb60-1e48-47a0-bda7-08702b7686b8" />
