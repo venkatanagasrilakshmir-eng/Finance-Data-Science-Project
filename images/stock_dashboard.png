@@ -1,0 +1,39 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# Load dataset
+df = pd.read_csv("../data/stock_data.csv")
+
+# Dashboard figure
+fig = plt.figure(figsize=(14,8))
+
+# Closing price chart
+ax1 = fig.add_subplot(2,2,1)
+ax1.plot(df['Close'])
+ax1.set_title("Closing Price")
+
+# Volume chart
+ax2 = fig.add_subplot(2,2,2)
+ax2.bar(range(len(df)), df['Volume'])
+ax2.set_title("Volume Analysis")
+
+# High-Low chart
+ax3 = fig.add_subplot(2,2,3)
+ax3.plot(df['High'], label='High')
+ax3.plot(df['Low'], label='Low')
+ax3.legend()
+ax3.set_title("High vs Low")
+
+# Open-Close chart
+ax4 = fig.add_subplot(2,2,4)
+ax4.plot(df['Open'], label='Open')
+ax4.plot(df['Close'], label='Close')
+ax4.legend()
+ax4.set_title("Open vs Close")
+
+plt.tight_layout()
+
+# Save dashboard
+plt.savefig("../images/stock_dashboard.png")
+
+plt.show()
