@@ -1,0 +1,21 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# Load data
+df = pd.read_csv("../data/stock_data.csv")
+
+# Plot graph
+plt.figure(figsize=(12,6))
+
+plt.plot(df['Close'], marker='o', linewidth=2)
+
+plt.title("Stock Closing Price Trend")
+plt.xlabel("Days")
+plt.ylabel("Closing Price")
+
+plt.grid(True)
+
+# Save image
+plt.savefig("../images/trend_analysis.png")
+
+plt.show()
